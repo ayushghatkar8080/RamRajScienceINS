@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'Pages/HomePage.dart';
 import 'Pages/LoginPage.dart';
+import 'utils/theme_provider.dart';
 
 void main() {
-  runApp(const Main()); 
+  runApp(const Main());
 }
 
 class Main extends StatelessWidget {
@@ -14,13 +15,12 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.system,
       theme: ThemeData(
-          primarySwatch: Colors.deepPurple,
-          primaryTextTheme: GoogleFonts.latoTextTheme()),
-      darkTheme: ThemeData(
-        brightness: Brightness.dark,
+        primarySwatch: Colors.deepPurple,
+        primaryTextTheme: GoogleFonts.latoTextTheme(),
       ),
+      darkTheme: MyThemes.darkTheme,
       initialRoute: MyRoutes.loginroute,
       routes: {
         MyRoutes.homeroute: (context) => const HomePage(),
