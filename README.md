@@ -1,6 +1,6 @@
-# flutter_application_1
+#Ram Raj Science Institute
 
-A new Flutter project.
+My class app with tooo many feature
 
 ## Getting Started
 

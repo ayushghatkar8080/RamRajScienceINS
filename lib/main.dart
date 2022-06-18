@@ -15,12 +15,13 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.system,
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
         primaryTextTheme: GoogleFonts.latoTextTheme(),
       ),
-      initialRoute: MyRoutes.homeroute,
+      darkTheme: MyThemes.darkTheme,
+      initialRoute: MyRoutes.loginroute,
       routes: {
         MyRoutes.homeroute: (context) => HomePage(),
         MyRoutes.loginroute: (context) => LoginPage(),
